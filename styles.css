@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.85em;
+    margin: 15px 0;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #3acec2;
+    font-size: 1.25em;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+}
+
+.banner {
+    background-color: #3acec2;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+}
+
+.banner img {
+    width: 250px;
+    height: 250px;
+}
+
+.info {
+    margin: 75px 15px;
+}
+
+h3 {
+    color: #093a58;
+    font-size: 1.85em;
+}
+
+.info p {
+    font-size: 1.15em;
+    line-height: 1.5;
+}
+
+figure {
+    position: relative;
+    margin: 0;
+    line-height: 0;
+}
+
+.location {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: -15px;
+    top: -15px;
+}
+
+figcaption {
+    position: absolute;
+    color: white;
+    background-color: rgb(0, 0, 139, .7);
+    bottom: 0;
+    width: 100%;
+    padding: 0 1em;
+}
+
+figcaption h4 {
+    font-size: 1.3em;
+}
+
+
+.heavy {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background-color: lightgray;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        background-color: white;
+        box-shadow: 0 3px 7px #888888;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        padding: 5px 0;
+    }
+
+    /*
+    header
+    - box shadow was not showing because banner was overlapping it
+    - brought the header forward with position: sticky;
+    - for the header to stay on top of the browser,
+    - apply a top value of 0;
+    - apply a z-index of 1 so that other position elements aren't over it
+    */
+
+    /*
+    - create background color since there wasn't one to begin with
+    - move h1 element to left
+    - move the whole list container to the right
+    - make list items in one line starting the first item on the left by floating left
+    */
+
+     header h1 {
+        float: left;
+    }
+ 
+    ul {
+        float: right;
+    }
+
+     ul li {
+        float: left;
+        padding: 0 25px;
+    }
+
+    li a {
+        margin: 0;
+    }  
+
+    .info {
+        margin-right: 0;
+        margin-left: 0;
+    } 
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+/* just finished header
+ -start with making the main content into new columns at the 769 width
+*/
+
+}
