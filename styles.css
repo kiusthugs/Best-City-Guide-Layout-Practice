@@ -96,6 +96,8 @@ footer {
     font-size: 1.2em;
 }
 
+/*2 column layout for bigger than mobile screens */
+
 @media only screen and (min-width: 768px) {
     header {
         background-color: white;
@@ -132,7 +134,7 @@ footer {
 
      ul li {
         float: left;
-        padding: 0 25px;
+        padding-left: 45px;
     }
 
     li a {
@@ -154,8 +156,40 @@ footer {
         clear: both;
         display: table;
     }
-/* just finished header
- -start with making the main content into new columns at the 769 width
-*/
 
+    .col {
+        float: left;
+    }
+
+    .one,
+    .two {
+        width: 50%;
+    }
+
+    .one {
+        padding-right: 15px;
+    }
+
+    .two {
+        padding-left: 15px;
+    }
+}
+
+/* Three column layout for desktop sizes*/
+
+@media only screen and (min-width: 1026px) {
+    .one,
+    .three {
+        width: 30%;
+    }
+    
+    .one,
+    .two {
+        padding: 0;
+    }
+
+    .two {
+        width: 40%;
+        padding: 0 25px;
+    }
 }
